@@ -1,0 +1,23 @@
+<%= javascript_pack_tag 'application' %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section>
+        <%= render 'shared/profile' %>
+      </section>
+      <hr />
+      <section class="micropost_form">
+        <%= render 'shared/task_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <%= render 'shared/list' %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h2>Welcome to Annie's STC qualification project!</h2>
+    <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

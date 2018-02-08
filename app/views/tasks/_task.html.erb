@@ -1,0 +1,14 @@
+<li id="micropost-<%= task.id %>">
+  <span class="content">
+    <% if task.completed %>
+      <s><%= task.content %></s>
+    <% else %>
+      <%= task.content %>
+    <% end %>
+  </span>
+  <span>
+    <% if current_user?(task.user) && !task.completed %>
+      <%= link_to "check", task, method: :complete %>
+    <% end %>
+  </span>
+</li>

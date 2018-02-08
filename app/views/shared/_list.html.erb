@@ -1,0 +1,11 @@
+<div id='tasks'>
+  <hr />
+  <h3>Task List:</h3>
+  <%= react_component("Tasks", { tasks: current_user.tasks.where(completed: false) }) %>
+  <hr /><h3>Completed Tasks:</h3>
+  <%= react_component("Tasks", { tasks: current_user.tasks.where(completed: true) }) %>
+  <hr />
+  <script>
+    ReactRailsUJS.mountComponents()
+  </script>
+</div>

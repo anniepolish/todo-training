@@ -1,0 +1,17 @@
+
+<div class="col-md-8">
+  <div>
+    <%= @user.name %>, <%= @user.email %>
+    <%= picture_for @user %>
+  </div>
+  <hr />
+  <div>
+    <% if @user.tasks.any? %>
+      <h3>Tasks (<%= @user.tasks.count %>)</h3>
+      <ol class="microposts">
+        <%= render @tasks %>
+      </ol>
+      <%= will_paginate @tasks %>
+    <% end %>
+  </div>
+</div>

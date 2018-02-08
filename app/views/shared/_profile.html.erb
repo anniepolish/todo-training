@@ -1,0 +1,13 @@
+<div id='profile'>
+  <%
+    if got_pic = Pic.find_by(user_id:current_user.id)
+      url = got_pic.url
+    else
+      url = "http://secure.gravatar.com/avatar/#1" #default pic
+    end
+  %>
+  <%= react_component("Profile", {url: url, tasks: current_user.tasks, name: current_user.name}) %>
+  <script>
+    ReactRailsUJS.mountComponents()
+  </script>
+</div>
