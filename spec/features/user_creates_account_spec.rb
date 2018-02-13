@@ -2,9 +2,9 @@ require "rails_helper"
 
 #Capybara.default_driver = :selenium
 
-feature "User creates account" do
+feature "User creates account", js: true do
   scenario "successfully" do
-    visit root_url
+    visit '/'
     click_on "Sign up"
     fill_in "Name", with: "example"
     fill_in "Email", with: "example@example.com"

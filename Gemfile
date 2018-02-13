@@ -36,6 +36,8 @@ group :test do
   gem 'guard-minitest',           '2.4.4'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'phantomjs'
+  gem 'poltergeist'
 end
 
 group :production do
