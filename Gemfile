@@ -20,6 +20,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -36,7 +37,6 @@ group :test do
   gem 'guard-minitest',           '2.4.4'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_bot_rails'
 end
 
 group :production do

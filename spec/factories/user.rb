@@ -5,5 +5,6 @@ FactoryBot.define do
     name "test user"
     email "test@example.com"
     password "password"
+    zip 06511
   end
 end
