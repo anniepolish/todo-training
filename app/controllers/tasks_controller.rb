@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :complete
-
+ 
   def create
     @task = current_user.tasks.build(task_params)
     @task.completed = false
